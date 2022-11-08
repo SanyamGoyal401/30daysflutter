@@ -1,6 +1,9 @@
+import 'dart:convert';
+
 import 'package:days/pages/home_page.dart';
 import 'package:days/pages/login_page.dart';
 import 'package:days/utils/routes.dart';
+import 'package:days/widgets/themes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,10 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       themeMode: ThemeMode.light,
-      theme: ThemeData(primarySwatch: Colors.amber),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-      ),
+      theme: MyTheme.lightTheme(context),
       debugShowCheckedModeBanner: false,
       initialRoute: MyRoutes.homeRoute,
       routes: {
